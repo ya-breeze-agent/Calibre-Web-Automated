@@ -22,5 +22,7 @@ python -m compileall -q scripts
 
 ### Task 3: Review and deliver
 - [x] Complete native Review Gate and Claude peer attempt, resolving valid findings.
-- [ ] Validate a pinned candidate image on an isolated library copy.
+- [x] Validate a pinned candidate image on an isolated library copy.
 - [ ] Publish an upstream PR with attribution, linked issue and validation evidence.
+
+Isolated validation used image `f639` at source revision `3eb2f01`. With the feature disabled, two identical PDFs created two books. With it enabled, an exact PDF repeat created no book and was quarantined, while same-size changed bytes imported. A real TXT-to-EPUB conversion passed CWA cover enforcement and metadata rewriting; repeating the original TXT before and after restart created no extra book. The 82-book library inventory and its existing format hashes remained unchanged.
